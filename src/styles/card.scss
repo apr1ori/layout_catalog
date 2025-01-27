@@ -18,6 +18,11 @@ body {
   width: $card-width;
   border-radius: $card-radius;
   color: #060b35;
+  transition-duration: 200ms;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   &__content {
     display: flex;
@@ -42,6 +47,10 @@ body {
     padding-inline: $inline-padding;
     line-height: 18px;
     box-sizing: border-box;
+  }
+
+  &:hover &__title {
+    color: #34568b;
   }
 
   &__code {
@@ -124,5 +133,13 @@ body {
     &:hover &-link {
       color: $button-color;
     }
+  }
+
+  &:hover &__button {
+    background-color: #fff;
+  }
+
+  &:hover &__button-link {
+    color: #00acdc;
   }
 }
